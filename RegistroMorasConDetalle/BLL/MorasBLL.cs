@@ -160,25 +160,5 @@ namespace RegistroMorasConDetalle.BLL
             }
             return lista;
         }
-
-        public static List<Moras> GetEstudiante()
-        {
-            List<Moras> lista = new List<Moras>();
-            Contexto contexto = new Contexto();
-            try
-            {
-                lista = contexto.Moras.ToList();
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return lista;
-        }
     }
 }
