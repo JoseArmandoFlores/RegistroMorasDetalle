@@ -150,5 +150,26 @@ namespace RegistroMorasConDetalle.BLL
 
             return lista;
         }
+
+        public static List<Prestamos> GetPretamo()
+        {
+            List<Prestamos> lista = new List<Prestamos>();
+            Contexto db = new Contexto();
+            try
+            {
+                lista = db.Prestamos.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+
+            return lista;
+        }
     }
 }
